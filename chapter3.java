@@ -1,5 +1,39 @@
+import java.util.Scanner;
+
 public class chapter3 {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println(a+b);
 
+		//기본형: 실제 값을 저장(boolean, char, int ...)
+		//참조형: 값이 저장되어 있는 주소를 저장
+		//printf -> 같은 값이라도 다른 형식으로 출력
+		// float f1 = .10f;
+		// float f2 = 3.14f;
+		// double d1 = 3.14315354;
+		// System.out.printf("f1 = %f, %e, %g%n", f1,f1,f1);
+		// System.out.printf("f1 = %f, %e, %g", f2,f2,f2);
+		// System.out.printf("f1 = %f, %e, %g", d1,d1,d1);
+		// System.out.println();
+		// //화면으로부터 입력받기
+		// Scanner scanner = new Scanner(System.in);
+		// System.out.println("두자리의 정수를 입력해주세요 ");
+		// String input = scanner.nextLine();
+		// int num = Integer.parseInt(input);  //입력받은 문자열을 숫자로 변환
+		// System.out.printf("num= %d" , num);
+		// int a = scanner.nextInt();
+		// System.out.println(a);
+		// int b =scanner.nextInt(8); //redix: 진법
+		// System.out.println(b);
+		short sMin  = -32768, sMax = 32767;
+		char cMin = 0, cMax = 65535;
+		System.out.println(sMin);
+		System.out.println((short)(sMin-1));
+		System.out.println(sMax);
 	}
+
+
 }
+
