@@ -2,42 +2,30 @@ import java.util.Scanner;
 
 public class Main {
 
-	public String solution(int n){
-		String answer = "";
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < i; j++) {
-				answer += " ";
+	public int solution(String n){
+		int answer = 1;
+		n = n.toLowerCase();
+		StringBuilder sn = new StringBuilder(n);
+		sn.reverse();
+		for(int i = 0; i < n.length(); i++){
+			if(n.charAt(i) != sn.charAt(i)){
+				answer = 0;
 			}
-			for(int k = 0; k < (2 * n -1) - (2 * i); k++){
-				answer += "*";
-			}
-			answer += "\n";
 		}
-
-		for(int i = 1; i < n; i++){
-			for(int j = 0; j < n - i - 1; j++){
-				answer += " ";
-			}
-			for(int k = 0; k < i * 2 + 1; k++){
-				answer += "*";
-			}
-			answer += "\n";
-		}
-
-
 
 		return answer;
-
-
+		
 	}
 	public static void main(String[] args) {
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		int n = kb.nextInt();
+		String n = kb.next();
 		System.out.print(T.solution(n));
 	}
 }
 
+
+//생각한 팰린드롬
 
 
 
